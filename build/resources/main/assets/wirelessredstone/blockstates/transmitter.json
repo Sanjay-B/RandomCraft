@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "transmitting=false": { "model": "wirelessredstone:block/transmitter" },
-    "transmitting=true": { "model": "wirelessredstone:block/transmitter_on" }
-  }
-}
