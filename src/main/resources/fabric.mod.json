@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wirelessredstone",
+  "version": "${version}",
+  "name": "Wireless Redstone",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/wirelessredstone/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.turnereison.wirelessredstone.client.WirelessRedstoneClient"
+    ],
+    "main": [
+      "com.turnereison.wirelessredstone.WirelessRedstone"
+    ]
+  },
+  "mixins": [
+    "wirelessredstone.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17"
+  }
+}
