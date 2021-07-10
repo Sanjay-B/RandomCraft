@@ -5,6 +5,7 @@ run/
 run/**
 .gradle
 .idea
+build/
 **/build/
 !src/**/build/
 
