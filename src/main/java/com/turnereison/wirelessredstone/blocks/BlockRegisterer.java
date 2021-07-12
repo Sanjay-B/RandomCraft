@@ -1,13 +1,13 @@
 package com.turnereison.wirelessredstone.blocks;
 
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import com.turnereison.wirelessredstone.blocks.entities.TransmitterEntity;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Blocks;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Material;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -15,9 +15,27 @@ public class BlockRegisterer {
     private static final String NAMESPACE = "wirelessredstone";
 
     public static final Transmitter TRANSMITTER = new Transmitter(FabricBlockSettings.of(Material.METAL).hardness(2.0f));
+    public static BlockEntityType<TransmitterEntity> TRANSMITTER_ENTITY_TYPE;
 
     public static void register() {
-        Registry.register(Registry.BLOCK, new Identifier(NAMESPACE, "transmitter"), TRANSMITTER);
-        Registry.register(Registry.ITEM, new Identifier(NAMESPACE, "transmitter"), new BlockItem(TRANSMITTER, new FabricItemSettings().group(ItemGroup.REDSTONE)));
+        Registry.register(
+                Registry.BLOCK,
+                new Identifier(NAMESPACE, "transmitter"),
+                TRANSMITTER
+        );
+
+        Registry.register(
+                Registry.ITEM,
+                new Identifier(NAMESPACE, "transmitter"),
+                new BlockItem(TRANSMITTER, new FabricItemSettings().group(ItemGroup.REDSTONE))
+        );
+
+        TRANSMITTER_ENTITY_TYPE = Registry.register(
+                Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(NAMESPACE, "transmitter_entity"),
+                FabricBlockEntityTypeBuilder
+                        .create(TransmitterEntity::new, TRANSMITTER)
+                        .build(null)
+        );
     }
 }
