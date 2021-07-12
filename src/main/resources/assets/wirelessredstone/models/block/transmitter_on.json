@@ -3,7 +3,8 @@
 	"parent": "block/cube_all",
 	"textures": {
 		"0": "wirelessredstone:block/base",
-		"1": "wirelessredstone:block/stem_on"
+		"1": "wirelessredstone:block/stem_on",
+		"particle": "wirelessredstone:block/base"
 	},
 	"elements": [
 		{
