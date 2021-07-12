@@ -55,7 +55,7 @@ public class Transmitter extends Block implements BlockEntityProvider {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return VoxelShapes.union(
                 Block.createCuboidShape(1,0,1,15,1,15),
-                Block.createCuboidShape(7,1,7, 9,12,9)
+                Block.createCuboidShape(7,1,7, 9,7,9)
         );
     }
 
