@@ -1,0 +1,27 @@
+{
+  "group": "wirelessredstone",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " T ",
+    "SRS",
+    "III"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:redstone_torch"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "wirelessredstone:transmitter",
+    "count": 1
+  }
+}
