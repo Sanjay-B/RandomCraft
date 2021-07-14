@@ -21,7 +21,7 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Build Gradle
         if: ${{ runner.os != 'Windows' }}
-        run: chmod +x ./gradew
+        run: chmod +x ./gradlew
       - name: Build Repository
         run: ./gradlew build
       - name: Build Artifacts
